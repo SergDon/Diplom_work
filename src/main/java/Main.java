@@ -10,7 +10,7 @@ import java.util.List;
 class Main {
     public static void main(String[] args) {
 
-        try (ServerSocket serverSocket = new ServerSocket(8988)) {
+        try (ServerSocket serverSocket = new ServerSocket(8989)) {
             System.out.println("Сервер успешно запущен!\nОн работает на порту 8989\n");
             System.out.println("Поисковик ищет слово:......... \n");
             BooleanSearchEngine engine = new BooleanSearchEngine(new File("pdfs"));
