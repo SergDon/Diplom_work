@@ -13,6 +13,7 @@
 
 ![image](https://user-images.githubusercontent.com/53707586/152980485-675392c1-4d98-4e22-abdc-7a85678f53a7.png)
 
+
 В проекте есть заготвки кода:
 
 | Класс      | Описание |
