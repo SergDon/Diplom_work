@@ -1,20 +1,20 @@
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Collections;
 import java.util.List;
 
-class Main {
+public class Main {
     public static void main(String[] args) {
 
         try (ServerSocket serverSocket = new ServerSocket(8989)) {
             System.out.println("Сервер успешно запущен!\nОн работает на порту 8989\n");
-            System.out.println("Поисковик ищет слово:......... \n");
+            String searchWord = "блокчейн";
+            System.out.println("Поисковик ищет слово: " + searchWord + "\n");
             BooleanSearchEngine engine = new BooleanSearchEngine(new File("pdfs"));
-            var searchResult = Collections.unmodifiableList(engine.search("методы"));
+            var searchResult = Collections.unmodifiableList(engine.search(searchWord));
             System.out.println(searchResult);
             engine.readUnusefulWords("stop-ru.txt");
             Gson gson = new GsonBuilder().create();
